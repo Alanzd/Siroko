@@ -4,7 +4,8 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById('promo-code').innerHTML = promoCode;
 
   //copiar al portapapeles
-  document.querySelector(".copy-btn").addEventListener("click", () => {
+  document.querySelector(".copy-btn").addEventListener("click", (e) => {
+    e.preventDefault()
     navigator.clipboard.writeText(promoCode)
   });
 
