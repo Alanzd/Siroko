@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="styles.css"><link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+  </script>
+  <script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
   <script src="./step2.js"></script>
 </head>
 <body>
@@ -20,22 +33,24 @@
     <form class="form" id="form-2">
       <p class="question">por unas gafas siroko, yo...</p>
       <div class="options">
-        <label>
-          <input type="radio" name="option" value="Segaría a navaja">
-          <span>Segaría a navaja</span>
-        </label>
-        <label>
-          <input type="radio" name="option" value="Rechazaría a un cachopo">
-          <span>Rechazaría a un cachopo</span>
-        </label>
-        <label>
-          <input type="radio" name="option" value="Renunciaría a mis tierras">
-          <span>Renunciaría a mis tierras</span>
-        </label>
-        <label>
-          <input type="radio" name="option" value="Regalaría una ternera">
-          <span>Regalaría una ternera</span>
-        </label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="option" value="Segaría a navaja">
+            <span>Segaría a navaja</span>
+          </label>
+          <label>
+            <input type="radio" name="option" value="Rechazaría a un cachopo">
+            <span>Rechazaría a un cachopo</span>
+          </label>
+          <label>
+            <input type="radio" name="option" value="Renunciaría a mis tierras">
+            <span>Renunciaría a mis tierras</span>
+          </label>
+          <label>
+            <input type="radio" name="option" value="Regalaría una ternera">
+            <span>Regalaría una ternera</span>
+          </label>
+        </div>
       </div>
       <button type="submit"id="step2" class="submit">Siguiente →</button>
     </form>

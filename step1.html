@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test de Siroko</title>
-  <link rel="stylesheet" href="styles.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="./step1.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header class="header">
@@ -20,34 +23,35 @@
         Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida.
       </p>
     </header>
-
     <form class="form" id="form-1">
       <p class="question">uso siroko desde...</p>
       <div class="options">
-        <label>
-          <input type="radio" name="year" value="2016">
-          <span>2016</span>
-        </label>
-        <label>
-          <input type="radio" name="year" value="2017">
-          <span>2017</span>
-        </label>
-        <label>
-          <input type="radio" name="year" value="2018">
-          <span>2018</span>
-        </label>
-        <label>
-          <input type="radio" name="year" value="2019">
-          <span>2019</span>
-        </label>
-        <label>
-          <input type="radio" name="year" value="2020">
-          <span>2020</span>
-        </label>
-        <label>
-          <input type="radio" name="year" value="2021">
-          <span>2021</span>
-        </label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="year" value="2016">
+            <span>2016</span>
+          </label>
+          <label>
+            <input type="radio" name="year" value="2017">
+            <span>2017</span>
+          </label>
+          <label>
+            <input type="radio" name="year" value="2018">
+            <span>2018</span>
+          </label>
+          <label>
+            <input type="radio" name="year" value="2019">
+            <span>2019</span>
+          </label>
+          <label>
+            <input type="radio" name="year" value="2020">
+            <span>2020</span>
+          </label>
+          <label>
+            <input type="radio" name="year" value="2021">
+            <span>2021</span>
+          </label>
+        </div>
       </div>
       <button id="step1" type="submit" class="submit">Siguiente →</button>
     </form>
@@ -58,4 +62,5 @@
     </footer>
   </div>
 </body>
+
 </html>

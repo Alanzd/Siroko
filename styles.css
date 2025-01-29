@@ -5,21 +5,25 @@
   src:
     url("./fonts/LiberatorSIROKO-Heavy.ttf") format("truetype"),
 }
+
 @font-face {
   font-family: 'liberator_light';
   src:
     url("./fonts/LiberatorSIROKO-Light.ttf") format("truetype"),
 }
+
 @font-face {
   font-family: 'liberator_med';
   src:
     url("./fonts/LiberatorSIROKO-Medium.ttf") format("truetype"),
 }
+
 @font-face {
   font-family: 'liberator_out';
   src:
     url("./fonts/LiberatorSIROKO-Outline.ttf") format("truetype"),
 }
+
 @font-face {
   font-family: 'liberator_thin';
   src:
@@ -30,7 +34,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inconsolata", sans-serif;
-  background: url('./images/background.jpg') no-repeat; 
+  background: url('./images/background.jpg') no-repeat;
   background-size: cover;
   color: #ffffff;
   display: flex;
@@ -40,7 +44,7 @@ body {
 
 .container {
   width: 100%;
-  padding:25px 25px 0px 25px
+  padding: 25px 25px 0px 25px
 }
 
 .header .logo {
@@ -48,6 +52,7 @@ body {
   justify-content: left;
   align-items: flex-start;
   margin: 0 auto 20px;
+
   & img {
     width: 28px;
     height: 32px;
@@ -67,6 +72,7 @@ body {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
 .header .step.done {
   width: 104px;
 }
@@ -105,7 +111,40 @@ form {
   margin-bottom: 25px;
 }
 
-.form .options label {
+
+.radio-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.09);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 10px; 
+  accent-color: #ffffff;  
+}
+
+.radio-group label:hover {
+  background-color: #C92F58;
+
+}
+
+.radio-group input[type="radio"]:checked+label {
+  background-color: #C92F58;
+
+}
+
+
+/* .form .options label {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
@@ -135,7 +174,7 @@ form {
   color: #FFFFFF;
   font-weight: 400;
   transform: scale(1.02);
-}
+} */
 
 .form .submit {
   width: 100%;
@@ -246,12 +285,12 @@ p {
 
 @media screen and (min-width: 481px) {
   .container {
-      margin: 35px 35px 0px 35px;
+    margin: 35px 35px 0px 35px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-      margin: 50px 250px 0px 250px;
+    margin: 50px 250px 0px 250px;
   }
 }
