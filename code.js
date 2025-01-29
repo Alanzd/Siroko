@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // cuenta atrás
   const countdownElement = document.getElementById("countdown");
   // obtengo los segundos de 20min
-  let timeLeft = 1 * 60;
+  let timeLeft = 20 * 60;
 
   function updateCountdown() {
     //obtengo los minutos
@@ -49,7 +49,8 @@ window.addEventListener("DOMContentLoaded", () => {
     // obtengo los segundos
     const seconds = timeLeft % 60;
 
-    countdownElement.innerHTML = `${minutes}:${seconds}`;
+    // si los segundos son menos de 10 añado un 0 delante
+    countdownElement.innerHTML = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
     if (timeLeft <= 0) {
       window.location.href = './expired.html';
