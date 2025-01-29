@@ -54,16 +54,20 @@ body {
 }
 
 .header .step {
+  padding-left: 7px;
   color: #2C5E5B;
-  font-family: "Inter", serif;;
   background: #5DC2BD;
   border-radius: 2px;
   width: 53px;
   height: 11px;
-  line-height: 11px;
+  line-height: 10px;
   font-weight: 700;
   font-size: 9px;
   margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.header .step.done {
+  width: 104px;
 }
 
 .header h1 {
@@ -71,6 +75,7 @@ body {
   font-weight: bold;
   margin: 15px 0;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .header .description {
@@ -78,6 +83,7 @@ body {
   font-weight: 400;
   line-height: 18.72px;
   margin: 10px 0 25px;
+  text-transform: uppercase;
 }
 
 form {
@@ -91,6 +97,7 @@ form {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .form .options {
@@ -134,20 +141,88 @@ form {
   width: 100%;
   display: inline-block;
   padding: 12px 25px;
-  background: #1fe0c5;
+  background-color: #5DC2BD;
   border: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form .submit:hover {
-  background: #17b59b;
-  transform: translateY(-2px);
+.code-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.code-box span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.copy-btn {
+  background-color: #5DC2BD;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.expired {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #C51414;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expired a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  padding: 10px;
+  background-color: #5DC2BD;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
 .footer {
