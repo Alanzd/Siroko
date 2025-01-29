@@ -26,5 +26,40 @@ window.addEventListener("DOMContentLoaded", () => {
   // Generaro el código
   const promoCode = generatePromoCode(selectedYear, selectedOption);
 
+  //copiar al portapapeles
+  document.querySelector(".copy-btn").addEventListener("click", () => {
+    navigator.clipboard.writeText(promoCode)
+  });
+
+  //paso el codigo generado en el localStorage
+  localStorage.setItem('promoCode', promoCode);
+
   // lo muestro como texto plano 
   document.getElementById("promo-code").textContent = promoCode;
+
+  // cuenta atrás
+  const countdownElement = document.getElementById("countdown");
+  // obtengo los segundos de 20min
+  let timeLeft = 1 * 60;
+
+  function updateCountdown() {
+    //obtengo los minutos
+    const minutes = Math.floor(timeLeft / 60);
+
+    // obtengo los segundos
+    const seconds = timeLeft % 60;
+
+    countdownElement.innerHTML = `${minutes}:${seconds}`;
+
+    if (timeLeft <= 0) {
+      window.location.href = './expired.html';
+    }
+
+    // resto un segundo en cada vuelta
+    timeLeft--;
+  }
+  //repito la funcion cada segundo
+  const timer = setInterval(updateCountdown, 1000);
+
+
+});
