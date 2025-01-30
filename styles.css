@@ -147,7 +147,6 @@ form {
 
 .radio-group label:hover {
   background-color: #C92F58;
-
 }
 
 .radio-group label:has(input[type="radio"]:checked){
