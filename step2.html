@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test de Siroko</title>
-  <link rel="stylesheet" href="styles.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-  <script type="importmap">
-    {
-      "imports": {
-        "@material/web/": "https://esm.run/@material/web/"
-      }
-    }
-  </script>
-  <script type="module">
-    import '@material/web/all.js';
-    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-
-    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="./step2.js"></script>
 </head>
+
 <body>
   <div class="container">
-    <header class="header">
-      <div class="logo"><img src="./images/SK Iso@2x.png" alt="" srcset=""></div>
-      <p class="step">paso 2 de 2</p>
-      <h1>vamos, una más</h1>
-    </header>
+    <div class="content-wrap">
+      <header class="header">
+        <div class="logo"><img src="./images/SK Iso@2x.png" alt="" srcset=""></div>
+        <p class="step">paso 2 de 2</p>
+        <h1>vamos, una más</h1>
+      </header>
 
-    <form class="form" id="form-2">
-      <p class="question">por unas gafas siroko, yo...</p>
-      <div class="options">
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="option" value="Segaría a navaja">
-            <span>Segaría a navaja</span>
-          </label>
-          <label>
-            <input type="radio" name="option" value="Rechazaría a un cachopo">
-            <span>Rechazaría a un cachopo</span>
-          </label>
-          <label>
-            <input type="radio" name="option" value="Renunciaría a mis tierras">
-            <span>Renunciaría a mis tierras</span>
-          </label>
-          <label>
-            <input type="radio" name="option" value="Regalaría una ternera">
-            <span>Regalaría una ternera</span>
-          </label>
+      <form class="form" id="form-2">
+        <p class="question">por unas gafas siroko, yo...</p>
+        <div class="options">
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="option" value="Segaría a navaja">
+              <span>Segaría a navaja</span>
+            </label>
+            <label>
+              <input type="radio" name="option" value="Rechazaría a un cachopo">
+              <span>Rechazaría a un cachopo</span>
+            </label>
+            <label>
+              <input type="radio" name="option" value="Renunciaría a mis tierras">
+              <span>Renunciaría a mis tierras</span>
+            </label>
+            <label>
+              <input type="radio" name="option" value="Regalaría una ternera">
+              <span>Regalaría una ternera</span>
+            </label>
+          </div>
         </div>
-      </div>
-      <button type="submit"id="step2" class="submit">Siguiente →</button>
-    </form>
-
+        <button type="submit" id="step2" class="submit">Siguiente →</button>
+      </form>
+    </div>
     <footer class="footer">
       <p>2016-2021 Siroko Solutions S.L.</p>
       <p>Todos los derechos reservados <a href="#" class="link">Ver bases</a></p>
     </footer>
   </div>
 </body>
+
 </html>

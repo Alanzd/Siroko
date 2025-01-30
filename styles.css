@@ -30,6 +30,10 @@
     url("./fonts/LiberatorSIROKO-Thin.ttf") format("truetype"),
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -38,13 +42,19 @@ body {
   background-size: cover;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .container {
   width: 100%;
-  padding: 25px 25px 0px 25px
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  padding: 25px 25px 2.5rem 25px;
 }
 
 .header .logo {
@@ -60,26 +70,25 @@ body {
 }
 
 .header .step {
-  padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left; 
+  align-items: center; 
+  padding: 5px 10px;
+  width: max-content; 
+  font-family: 'Inter', sans-serif;
+  line-height: 9px;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 5px;
   color: #2C5E5B;
   background: #5DC2BD;
   border-radius: 2px;
-  width: 53px;
-  height: 11px;
-  line-height: 10px;
-  font-weight: 700;
-  font-size: 9px;
-  margin-bottom: 10px;
   text-transform: uppercase;
-}
-
-.header .step.done {
-  width: 104px;
 }
 
 .header h1 {
   font-size: 28px;
-  font-weight: bold;
   margin: 15px 0;
   line-height: 1.2;
   text-transform: uppercase;
@@ -98,10 +107,10 @@ form {
 }
 
 .form .question {
+  font-family: 'Inter', sans-serif;
   color: #EFE5C3;
   font-weight: 700;
   font-size: 12px;
-  font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -126,11 +135,14 @@ form {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+    & span {
+      font-size: 18px;
+    }
 }
 
 .radio-group input[type="radio"] {
   margin-right: 10px; 
-  accent-color: #ffffff;  
+  accent-color: #ffffff;
 }
 
 .radio-group label:hover {
@@ -138,45 +150,12 @@ form {
 
 }
 
-.radio-group input[type="radio"]:checked+label {
+.radio-group label:has(input[type="radio"]:checked){
   background-color: #C92F58;
-
 }
-
-
-/* .form .options label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.form .options input {
-  display: none;
-}
-
-.form .options input + span {
-  display: inline-block;
-  padding: 10px 15px;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  width: 100%;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.form .options input:checked + span {
-  background: #C92F58;
-  border-color:  #C92F58;
-  color: #FFFFFF;
-  font-weight: 400;
-  transform: scale(1.02);
-} */
 
 .form .submit {
+  font-family: 'Inter', sans-serif;
   width: 100%;
   display: inline-block;
   padding: 12px 25px;
@@ -184,7 +163,6 @@ form {
   border: none;
   color: #ffffff;
   font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -207,10 +185,10 @@ form {
 }
 
 .copy-btn {
+  font-family: 'Inter', sans-serif;
   background-color: #5DC2BD;
   color: #ffffff;
   font-size: 14px;
-  font-weight: bold;
   padding: 5px 10px;
   border: none;
   border-radius: 3px;
@@ -224,7 +202,6 @@ p {
 
 .countdown {
   font-size: 24px;
-  font-weight: bold;
   background-color: #222;
   padding: 10px;
   border-radius: 5px;
@@ -233,7 +210,6 @@ p {
 
 .expired {
   font-size: 16px;
-  font-weight: bold;
   color: white;
   background-color: #C51414;
   padding: 10px 15px;
@@ -253,24 +229,27 @@ p {
 }
 
 .btn {
+  font-family: 'Inter', sans-serif;
   display: block;
   padding: 10px;
   background-color: #5DC2BD;
   color: #ffffff;
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
   text-decoration: none;
   border-radius: 3px;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   text-align: left;
   background-color: black;
-  margin-top: 20px;
   font-size: 12px;
   color: #ccc;
-  height: 48px;
   padding: 25px;
 }
 
@@ -283,14 +262,14 @@ p {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 481px) {
-  .container {
-    margin: 35px 35px 0px 35px;
+@media (max-width: 767px) {
+  .content-wrap {
+    padding: 35px 35px 0px 35px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
-    margin: 50px 250px 0px 250px;
+@media (min-width: 768px)   {
+  .content-wrap {
+    padding: 50px 250px 0px 250px;
   }
 }

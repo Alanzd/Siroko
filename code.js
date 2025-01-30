@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // convierto a array de caracteres
       .split("")
       // filtro los caracteres: excluyo A, incluyo caracteres especiales
-      .filter(char => /[B-Z0-ÁÉÍÓÚÜÑ]/.test(char))
+      .filter(char => /[B-Z0-9ÁÉÍÓÚÜÑ]/.test(char))
       // cojo solo los ultimos 4 caracteres
       .slice(-4)
       // los vuelvo a unir en una cadena
@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const seconds = timeLeft % 60;
 
     // si los segundos son menos de 10 añado un 0 delante
-    countdownElement.innerHTML = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    countdownElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
     if (timeLeft <= 0) {
       window.location.href = './expired.html';
