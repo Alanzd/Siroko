@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // cuenta atrás
   const countdownElement = document.getElementById("countdown");
   // obtengo los segundos de 20min
-  let timeLeft = 0.2 * 60;
+  let timeLeft = 20 * 60;
 
   function updateCountdown() {
     //obtengo los minutos
