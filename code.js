@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // cuenta atrás
   const countdownElement = document.getElementById("countdown");
   // obtengo los segundos de 20min
-  let timeLeft = 20 * 60;
+  let timeLeft = 0.2 * 60;
 
   function updateCountdown() {
     //obtengo los minutos
@@ -54,7 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
     countdownElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
     if (timeLeft <= 0) {
-      window.location.href = './expired.html';
+      document.querySelector(".countdown").classList.add("hidden");
+      document.querySelector(".expired").classList.remove("hidden");
     }
 
     // resto un segundo en cada vuelta
@@ -64,4 +65,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const timer = setInterval(updateCountdown, 1000);
 
 
+  document.getElementById('reload').addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = './step1.html';
+  });
 });

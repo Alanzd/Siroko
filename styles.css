@@ -207,6 +207,10 @@ p {
   margin-bottom: 20px;
 }
 
+.countdown.hidden, .expired.hidden {
+  display: none;
+}
+
 .expired {
   font-size: 16px;
   color: white;
